@@ -1,4 +1,156 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISA Serverside Executor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0a0a0a 100%);
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .navbar {
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 16px 0;
+            border-bottom: 1px solid #333333;
+            text-align: center;
+        }
+
+        .tabs {
+            display: inline-flex;
+            background: #1f1f1f;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #444444;
+        }
+
+        .tab {
+            padding: 14px 40px;
+            font-size: 1.15rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #aaaaaa;
+        }
+
+        .tab.active {
+            background: linear-gradient(90deg, #2a2a2a, #3a3a3a);
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .content {
+            height: calc(100vh - 85px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content.active {
+            display: flex;
+        }
+
+        h1 {
+            font-size: 5.2rem;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+            background: linear-gradient(90deg, #e0e0e0, #b0b0b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 40px rgba(255,255,255,0.1);
+        }
+
+        p.subtitle {
+            font-size: 1.45rem;
+            opacity: 0.75;
+            margin: 0;
+        }
+
+        .howget {
+            max-width: 720px;
+            padding: 50px 60px;
+            background: rgba(25, 25, 25, 0.85);
+            border: 1px solid #444444;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .howget h2 {
+            font-size: 2.1rem;
+            margin-bottom: 25px;
+            color: #d0d0d0;
+        }
+
+        .howget p {
+            font-size: 1.35rem;
+            line-height: 1.7;
+            margin: 18px 0;
+            color: #cccccc;
+        }
+
+        .discord {
+            color: #7289da;
+            font-weight: 600;
+            font-size: 1.55rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar with tabs -->
+    <div class="navbar">
+        <div class="tabs">
+            <div class="tab active" onclick="showTab(0)">Home</div>
+            <div class="tab" onclick="showTab(1)">How to Get ISA?</div>
+        </div>
+    </div>
+
+    <!-- Home Tab -->
+    <div id="tab0" class="content active">
+        <div>
+            <h1>Welcome On ISA Serverside</h1>
+            <p class="subtitle">Internal Webserver • Roblox Serverside Executor</p>
+        </div>
+    </div>
+
+    <!-- How to Get ISA Tab -->
+    <div id="tab1" class="content">
+        <div class="howget">
+            <h2>How to Get ISA?</h2>
+            <p>To get whitelisted and use ISA Serverside Executor,</p>
+            <p>you need to send a private message on Discord to:</p>
+            
+            <p class="discord">@Dogtograc</p>
+            
+            <p>and request access to the whitelist.</p>
+            <p><strong>Without whitelist you will not be able to use the executor.</strong></p>
+        </div>
+    </div>
+
+    <script>
+        function showTab(n) {
+            document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById('tab' + n).classList.add('active');
+            document.querySelectorAll('.tab')[n].classList.add('active');
+        }
+    </script>
+
+</body>
+</html><!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
