@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISA Serverside Executor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f0f0f, #1a0033);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* delikatne tło z efektem */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(100, 0, 255, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 2;
+            padding: 40px 60px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 60px rgba(120, 0, 255, 0.3);
+            max-width: 700px;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            background: linear-gradient(90deg, #ffffff, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(192, 132, 252, 0.5);
+        }
+
+        p {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin: 10px 0 0 0;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.6;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome On ISA Serverside</h1>
+        <p>Internal Webserver Executor</p>
+        <div class="subtitle">Roblox Serverside • Powered by ISA</div>
+    </div>
+</body>
+</html>
