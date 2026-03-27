@@ -1,1 +1,3 @@
-# ISA
+# ISA - With great power comes great responsibility
+
+1. DONT SKID THIS....
