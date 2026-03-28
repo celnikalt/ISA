@@ -8,10 +8,13 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json({ limit: '1mb' }));
 
+// <<< NOWOŚĆ: obsługa folderu /icon1/ISA.png >>>
+app.use('/icon', express.static('icon'));
+
 let codeQueue = [];
 let gameReports = {};
 
-// Główna strona (prosty HTML jak miałeś)
+// Główna strona
 app.get('/', (req, res) => {
   res.setHeader('Content-Type', 'text/html');
   res.send(`<!DOCTYPE html>
@@ -37,7 +40,7 @@ app.get('/', (req, res) => {
 </html>`);
 });
 
-// Endpointy executora (dokładnie jak podałeś)
+// Endpointy executora
 app.post('/send', (req, res) => {
   const { username, code } = req.body;
   if (typeof username !== 'string' || typeof code !== 'string') {
