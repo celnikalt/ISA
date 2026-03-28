@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json({ limit: '1mb' }));
 
-// <<< NOWOŚĆ: obsługa folderu /icon1/ISA.png >>>
+// <<< ZMIENIONE: folder 'icon' zamiast 'icon1' >>>
 app.use('/icon', express.static('icon'));
 
 let codeQueue = [];
