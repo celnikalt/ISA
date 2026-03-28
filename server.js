@@ -8,13 +8,10 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json({ limit: '1mb' }));
 
-// <<< ZMIENIONE: folder 'icon' zamiast 'icon1' >>>
-app.use('/icon', express.static('icon'));
-
 let codeQueue = [];
 let gameReports = {};
 
-// Główna strona
+// Główna strona (prosty HTML jak miałeś)
 app.get('/', (req, res) => {
   res.setHeader('Content-Type', 'text/html');
   res.send(`<!DOCTYPE html>
@@ -40,7 +37,7 @@ app.get('/', (req, res) => {
 </html>`);
 });
 
-// Endpointy executora
+// Endpointy executora (dokładnie jak podałeś)
 app.post('/send', (req, res) => {
   const { username, code } = req.body;
   if (typeof username !== 'string' || typeof code !== 'string') {
